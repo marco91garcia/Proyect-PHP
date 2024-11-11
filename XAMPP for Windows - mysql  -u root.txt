@@ -1,0 +1,78 @@
+
+Setting environment for using XAMPP for Windows.
+mgarc@MARCO c:\xampp
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE IF NOT EXISTS BaseDatosClase;
+Query OK, 1 row affected (0.051 sec)
+
+MariaDB [(none)]> USE BaseDatosClase;
+Database changed
+MariaDB [BaseDatosClase]> CREATE TABLE Usuarios (
+    ->     usu_id INT NOT NULL AUTO_INCREMENT,
+    ->     usu_nom TEXT NOT NULL,
+    ->     usu_apep TEXT,
+    ->     usu_apem TEXT,
+    ->     usu_correo TEXT UNIQUE,
+    ->     usu_pass TEXT,
+    ->     usu_telf TEXT,
+    ->     est INT,
+    ->     PRIMARY KEY (usu_id)
+    -> );
+Query OK, 0 rows affected (0.044 sec)
+
+MariaDB [BaseDatosClase]> CREATE TABLE Menu (
+    ->     id INT NOT NULL AUTO_INCREMENT,
+    ->     opcion TEXT,
+    ->     url TEXT,
+    ->     est INT,
+    ->     PRIMARY KEY (id)
+    -> );
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [BaseDatosClase]> CREATE TABLE Social_Media (
+    ->     socmed_id INT NOT NULL AUTO_INCREMENT,
+    ->     socmed_icono VARCHAR(80),
+    ->     socmed_url TEXT,
+    ->     est INT,
+    ->     PRIMARY KEY (socmed_id)
+    -> );
+Query OK, 0 rows affected (0.022 sec)
+
+MariaDB [BaseDatosClase]> CREATE TABLE Autorizaciones_Menu (
+    ->     id INT NOT NULL AUTO_INCREMENT,
+    ->     usuario_id INT NOT NULL,
+    ->     opcion_menu_id INT NOT NULL,
+    ->     tipo_permiso VARCHAR(20), -- Define si es 'lectura', 'escritura', etc.
+    ->     PRIMARY KEY (id),
+    ->     FOREIGN KEY (usuario_id) REFERENCES Usuarios(usu_id) ON DELETE CASCADE,
+    ->     FOREIGN KEY (opcion_menu_id) REFERENCES Menu(id) ON DELETE CASCADE
+    -> );
+Query OK, 0 rows affected (0.108 sec)
+
+MariaDB [BaseDatosClase]> CREATE TABLE Usuario_Redes (
+    ->     id INT NOT NULL AUTO_INCREMENT,
+    ->     usuario_id INT NOT NULL,
+    ->     red_social_id INT NOT NULL,
+    ->     PRIMARY KEY (id),
+    ->     FOREIGN KEY (usuario_id) REFERENCES Usuarios(usu_id) ON DELETE CASCADE,
+    ->     FOREIGN KEY (red_social_id) REFERENCES Social_Media(socmed_id) ON DELETE CASCADE
+    -> );
+Query OK, 0 rows affected (0.107 sec)
+
+MariaDB [BaseDatosClase]> CREATE TABLE Tipos_Rol (
+    ->     id_rol INT NOT NULL AUTO_INCREMENT,
+    ->     nombre_rol VARCHAR(50) NOT NULL,
+    ->     descripcion TEXT,
+    ->     PRIMARY KEY (id_rol)
+    -> );
+Query OK, 0 rows affected (0.083 sec)
+
+MariaDB [BaseDatosClase]>
