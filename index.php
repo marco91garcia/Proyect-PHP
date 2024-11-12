@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>::Mi pag web personal::</title>
-    <link rel="stylesheet" href="C:\Users\mgarc\OneDrive\Escritorio\tutorial\public\css\style.css">
+    <link rel="stylesheet" href="public\css\style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -29,7 +29,11 @@
             </header>
             <div class="presentacion">
                 <p class="mensaje">Bienvenidos</p>
+<<<<<<< HEAD
                 <h2>Soy <span>Marco Garcia</span> Ingeniero de sistemas</h2>
+=======
+                <h2>Soy <span>Marco Garcia</h2>
+>>>>>>> c034368423e6d25d932ad54f8a6eb2acc0169f72
                 <p class="descripciom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid exercitationem, 
                     adipisci tempore assumenda atque, veritatis veniam animi facere quaerat quam quasi harum, eum voluptate repellendus 
                     tenetur ipsum officiis rem.</p>
@@ -140,7 +144,7 @@
         <form action="">
             <div class="inputBox">
                 <div class="input">
-                    <span>NOMBRES Y APELLIDOS</span>
+                    <span>MARCO A GARCIA</span>
                     <input type="text" placeholder="Nombres y Apellidos">
                 </div>
                 <div class="input">
