@@ -1,11 +1,12 @@
 <?php
 session_start();
-if (!isset($_SESSION['usu_id'])) {
-    header("Location: ../index.php");
+
+// Verifica si el usuario está autenticado
+if (!isset($_SESSION["usu_id"])) {
+    header("Location: 404.php");
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,7 +20,16 @@ if (!isset($_SESSION['usu_id'])) {
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Dashboard</h1>
+        <!-- Encabezado -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Dashboard</h1>
+            <!-- Botón de cierre de sesión -->
+            <a href="../views/logout.php" class="btn btn-danger">
+                <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+            </a>
+        </div>
+
+        <!-- Tarjetas informativas -->
         <div class="row">
             <!-- Caja 1 -->
             <div class="col-md-3">

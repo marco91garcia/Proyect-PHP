@@ -2,7 +2,7 @@
 /* TODO: Llamando Cadena de Conexion */
 require_once("../config/conexion.php");
 
-if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
+if (isset($_POST["enviar"]) && $_POST["enviar"] == "si") {
   require_once("../models/Usuario.php");
     /* TODO: Inicializando Clase */
     $usuario = new Usuario();
@@ -38,32 +38,30 @@ if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
 
       <!-- El formulario ahora envía datos a login.php -->
       <form action="login.php" method="post">
-        <!-- Campo de correo -->
-        <div class="input-group mb-3">
-          <input type="email" name="correo" class="form-control" placeholder="Correo electrónico" required>
-          <div class="input-group-append">
+    <div class="input-group mb-3">
+        <input type="email" name="correo" class="form-control" placeholder="Correo electrónico" required>
+        <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+                <span class="fas fa-envelope"></span>
             </div>
-          </div>
         </div>
-        <!-- Campo de contraseña -->
-        <div class="input-group mb-3">
-          <input type="password" name="passwd" class="form-control" placeholder="Contraseña" required>
-          <div class="input-group-append">
+    </div>
+    <div class="input-group mb-3">
+        <input type="password" name="passwd" class="form-control" placeholder="Contraseña" required>
+        <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+                <span class="fas fa-lock"></span>
             </div>
-          </div>
         </div>
-        <!-- Botón de enviar -->
-        <div class="row">
-          <div class="col-12">
+    </div>
+    <div class="row">
+        <div class="col-12">
             <input type="hidden" name="enviar" value="si">
             <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
-          </div>
         </div>
-      </form>
+    </div>
+</form>
+
       <?php
 if (isset($_GET["m"])) {
     switch ($_GET["m"]) {

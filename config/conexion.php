@@ -23,10 +23,15 @@ class Conectar {
     public function set_names() {
         return $this->conexion->query("SET NAMES 'utf8'");
     }
+
+    // Método para devolver la URL base del proyecto.
+    public static function ruta() {
+        return "http://localhost/tutorial/";
+    }
 }
 
 // Ejemplo para probar la conexión.
 $conectar = new Conectar();
 $conectar->Conexion();
-echo "Conectado correctamente";
+echo "____";
 ?>

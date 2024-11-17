@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Verifica si el usuario está autenticado
+if (!isset($_SESSION["usu_id"])) {
+    header("Location: 404.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

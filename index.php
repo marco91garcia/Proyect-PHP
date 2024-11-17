@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>::Mi pag web personal::</title>
-    <link rel="stylesheet" href="public\css\style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -22,18 +22,16 @@
                 </nav>
                 <div class="icons">
                     <i class='#' id="#"></i>
-                    <a href="#" class="bx  bxl-linkedin"></a>
+                    <a href="#" class="bx bxl-linkedin"></a>
                     <a href="#" class="bx bxl-github"></a>
                     <a href="#" class="bx bxl-whatsapp"></a>
+                    <!-- Botón de inicio de sesión -->
+                    <a href="views/login.php" class="btn btn-primary" style="margin-left: 10px;">Iniciar Sesión</a>
                 </div>
             </header>
             <div class="presentacion">
                 <p class="mensaje">Bienvenidos</p>
-<<<<<<< HEAD
                 <h2>Soy <span>Marco Garcia</span> Ingeniero de sistemas</h2>
-=======
-                <h2>Soy <span>Marco Garcia</h2>
->>>>>>> c034368423e6d25d932ad54f8a6eb2acc0169f72
                 <p class="descripciom">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid exercitationem, 
                     adipisci tempore assumenda atque, veritatis veniam animi facere quaerat quam quasi harum, eum voluptate repellendus 
                     tenetur ipsum officiis rem.</p>
@@ -46,13 +44,12 @@
             <img src="public/image/foto1.jpg" alt="foto de perfil">
         </div>
         <div class="info_sobreMi">
-            <p class="titulo">Quien soy?</p>
+            <p class="titulo">¿Quién soy?</p>
             <h2>Soy, <span>Marco Garcia</span></h2>
             <h3>Slogan</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus harum ex a sunt facere ea eveniet maxime modi 
                 at commodi ratione amet ut explicabo ipsa, iusto autem possimus ab similique.</p>
         </div>
-
     </section>
     <section id="services">
         <p class="titulo">Mis Servicios</p>
@@ -78,7 +75,8 @@
                 </ul>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum debitis fugiat sequi commodi quos tempora 
                     consequuntur vero vel, quas at id exercitationem pariatur aliquam ipsum eos adipisci assumenda illum? Illum? </p>
-            </div>            <div class="servicio">
+            </div>            
+            <div class="servicio">
                 <span class="icon"><i class="bx bx-code-alt"></i></span>
                 <h3>Desarrollo de software</h3>
                 <ul>
@@ -140,7 +138,7 @@
         </div>
     </section>
     <section id="contactus">
-        <p class="titulo">CONTACTENOS</p>
+        <p class="titulo">CONTÁCTENOS</p>
         <form action="">
             <div class="inputBox">
                 <div class="input">
@@ -167,23 +165,18 @@
             <div class="action">
                 <input type="submit" value="Enviar" class="btn">
             </div>
-            
-
         </form>
         <div class="contact-container">
-          
             <div class="contact-card">
                 <i class='bx bx-envelope contact-card-icon'></i>
                 <h3 class="contact-card-title">Email</h3>
                 <span class="contact-card-data">marco91garcia@gmail.com</span>
             </div>
-
             <div class="contact-card">
                 <i class='bx bxl-whatsapp contact-card-icon'></i>
                 <h3 class="contact-card-title">Whatsapp</h3>
                 <span class="contact-card-data">(+57) 3217005069</span>
             </div>
-
             <div class="contact-card">
                 <i class='bx bxs-phone-call contact-card-icon'></i>
                 <h3 class="contact-card-title">Celular</h3>
@@ -199,6 +192,6 @@
             <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
         </div>
     </footer>
-    <script src="C:\Users\mgarc\OneDrive\Escritorio\tutorial\public\js\main.js"></script>
+    <script src="public/js/main.js"></script>
 </body>
-</html> 
+</html>
